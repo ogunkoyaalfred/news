@@ -1,0 +1,352 @@
+* {
+    padding: 0;
+    margin: o;
+    font-family: inter;
+    box-sizing: border-box;
+}
+
+/* this is the header */
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.open img {
+    position: absolute;
+    right: 54px;
+    top: 33px;
+}
+
+.close img {
+    position: absolute;
+    top: 1.75rem;
+    right: 55px;
+    /* z-index: 9999999999; */
+
+}
+
+nav {
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    height: 100vh;
+    width: 75vw;
+    font-size: 18px;
+}
+
+.links li {
+    list-style: none;
+    padding: 1rem 4rem 1rem 1rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+}
+
+.links a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~.open {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+#checkbox:checked~.close {
+    display: block;
+}
+
+#checkbox:checked~nav {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* this is the first image */
+.content {
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.firstimage {
+    background-image: url(./assets/images/image-web-3-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+/* this is the text under the first image */
+
+.firsttext h1 {
+    font-size: 45px;
+    color: hsl(240, 100%, 5%);
+    margin-bottom: -0.3rem;
+}
+
+.firsttext p {
+    font-size: 17px;
+    padding-top: -1.2rem;
+    line-height: 1.4;
+    color: hsl(236, 13%, 42%);
+}
+
+.firstbutton button {
+    width: 40%;
+    padding: 15px;
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.firstbutton button:hover {
+    cursor: pointer;
+    background-color: hsl(240, 100%, 5%);
+    animation: anime 0.7s;
+}
+
+@keyframes anime {
+    from {
+        background-color: hsl(5, 85%, 63%);
+    }
+
+    to {
+        background-color: hsl(240, 100%, 5%);
+    }
+}
+
+/* next section */
+.content2 {
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 5rem;
+    /* height: 79vh; */
+    padding: 0 3rem 0 3rem;
+}
+
+.content2 h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+    animation: anima 0.7s;
+}
+
+@keyframes anima {
+    from {
+        color: white;
+    }
+
+    to {
+        color: hsl(35, 77%, 62%);
+    }
+}
+
+.content2 h1 {
+    color: hsl(35, 77%, 62%);
+    padding-left: 10px;
+    padding-top: 17px;
+}
+
+.text1 {
+    color: white;
+    padding-left: 10px;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    line-height: 2.7;
+}
+
+.text1 p {
+    color: hsl(236, 13%, 42%);
+}
+
+.text2 {
+    color: white;
+    padding-left: 10px;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    line-height: 2.7;
+}
+
+.text2 p {
+    color: hsl(236, 13%, 42%);
+}
+
+.text3 {
+    color: white;
+    padding-left: 10px;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    line-height: 2.7;
+    padding-bottom: 2rem;
+}
+
+.text3 p {
+    color: hsl(236, 13%, 42%);
+}
+
+/* this is the last section */
+
+.content3 {
+    margin-top: 5rem;
+}
+
+.content3 p {
+    color: hsl(236, 13%, 42%);
+}
+
+.content3 h3:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.retroimg img {
+    width: 125%;
+}
+
+.retrotxt {
+    padding-left: 5rem;
+}
+
+.retrotxt h1 {
+    color: hsl(236, 13%, 42%);
+}
+
+.retro {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* part 2 */
+.lapimg img {
+    width: 107%;
+}
+
+.laptxt {
+    padding-left: 4rem;
+}
+
+.laptxt h1 {
+    color: hsl(236, 13%, 42%);
+}
+
+.lap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+/* part3  */
+
+.gameimg img {
+    width: 120%;
+}
+
+.gameimg img:hover {
+    /* transform: scale(1.2); */
+    transition: 2s;
+}
+
+.gameimg {
+    /* overflow: hidden; */
+}
+
+.gametxt {
+    padding-left: 5rem;
+}
+
+.gametxt h1 {
+    color: hsl(236, 13%, 42%);
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+@media (min-width:1024px) {
+    nav {
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    .burger {
+        position: absolute;
+        top: -80px;
+        left: 700px;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .firstimage {
+        background-image: url(./assets/images/image-web-3-desktop.jpg);
+        background-position: center;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        height: 50vh;
+        width: 57vw;
+    }
+    .firsttext {
+        display: flex;
+    }
+    .firstbutton button {
+        /* width: 10%; */
+    }
+    .web2 {
+        padding-left: 7rem;
+    }
+    .overcontent {
+        display: flex;
+    }
+    .content2 {
+        margin-top: -2px;
+        padding: -2rem;
+    }
+    .text2 {
+        line-height: 2;
+    }
+    .text1 {
+        line-height: 2;
+    }
+    .text3 {
+        line-height: 2;
+    }
+    .content3 {
+        display: flex;
+    }
+    .game {
+        margin-top: -1px;
+    }
+    .lap {
+        margin-top: -1px;
+    }
+    .lapimg {
+        width: 50%;
+    }
+    .retro {
+        margin-top: -1px;
+    }
+    .retroimg {
+     width: 33%;
+    }
+    .gametxt {
+        padding-left: -3rem;
+    }
+}
