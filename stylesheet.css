@@ -3,6 +3,7 @@
     margin: o;
     font-family: inter;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* this is the header */
@@ -71,6 +72,23 @@ nav {
 #checkbox:checked~nav {
     visibility: visible;
     opacity: 1;
+    animation: create 1.7s;
+}
+
+@keyframes create {
+0% {
+    position: absolute;
+    top: 80px;
+    left: 1000px;
+    height: 100vh;
+    width: 75vw;
+}
+25% {
+    position: absolute;
+    top: 80px;
+    left: 1000px;
+    height: 100vh;
+}
 }
 
 /* this is the first image */
@@ -109,7 +127,9 @@ nav {
     color: white;
     margin-top: 10px;
 }
-
+.web1 {
+    overflow-y: hidden;
+}
 .firstbutton button:hover {
     cursor: pointer;
     background-color: hsl(240, 100%, 5%);
@@ -303,49 +323,64 @@ nav {
         height: 50vh;
         width: 57vw;
     }
+
     .firsttext {
         display: flex;
     }
+
     .firstbutton button {
         /* width: 10%; */
     }
+
     .web2 {
         padding-left: 7rem;
     }
+
     .overcontent {
         display: flex;
     }
+
     .content2 {
         margin-top: -2px;
         padding: -2rem;
     }
+
     .text2 {
         line-height: 2;
     }
+
     .text1 {
         line-height: 2;
     }
+
     .text3 {
         line-height: 2;
     }
+
     .content3 {
         display: flex;
     }
+
     .game {
         margin-top: -1px;
     }
+
     .lap {
         margin-top: -1px;
     }
+
     .lapimg {
         width: 50%;
     }
+
     .retro {
         margin-top: -1px;
     }
+
     .retroimg {
-     width: 33%;
+        width: 33%;
     }
+
     .gametxt {
         padding-left: -3rem;
     }
